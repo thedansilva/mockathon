@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Some nice photos :)</title>
+	<title>Get Turnt: Random</title>
 	<link href="photos.css" rel="stylesheet" type="text/css"/>
 </head>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Some nice photos :)</title>
+	<title>Get Turnt: Ingredient</title>
 	<link href="photos.css" rel="stylesheet" type="text/css"/>
 </head>
 
@@ -12,7 +12,7 @@ $username = "root";
 $password = "";
 $dbname = "dmproj";
 $page = rand(1, 20);
-$input = $_GET["name"];
+$input = $_GET["ingredient"];
 //$input = "Margarita";
 $conn = new mysqli($servername, $username, $password, $dbname) or die ("NOEP");
 $response = file_get_contents('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i='.$input.'');

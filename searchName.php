@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Some nice photos :)</title>
+	<title>Get Turnt: Name</title>
 	<link href="photos.css" rel="stylesheet" type="text/css"/>
 </head>
 
@@ -19,16 +19,22 @@ $response = file_get_contents('https://www.thecocktaildb.com/api/json/v1/1/searc
 $jsondata = json_decode($response, true);
 //$jsondata = json_encode($arr_data, JSON_PRETTY_PRINT);
 //echo $jsondata;
-//var_dump($jsondata);
+//var_dump($jsondata)
+?>
+<div id="try">
+<table class="t1">
+	<caption id="titles">Here are your drinks!</caption>
+<?php 
 for ($i = 0; $i < count($jsondata['drinks']); $i++) {
 	//echo '<img src="'.$jsondata["drinks"][$i]['strDrinkThumb'].'"'>;
+	echo '<tr><th>';
 	echo '<img src="'.$jsondata["drinks"][$i]['strDrinkThumb'].'" width=310 height=175 alt="icon"" /><br>';
-	echo $jsondata["drinks"][$i]['strDrink'].'<br>';
-	echo $jsondata["drinks"][$i]['idDrink'].'<br>';
-	echo $jsondata["drinks"][$i]['strTags'].'<br>';
+	echo 'Name: '.$jsondata["drinks"][$i]['strDrink'].'<br>';
+	echo 'ID: '.$jsondata["drinks"][$i]['idDrink'].'<br>';
+	echo 'Tags: '.$jsondata["drinks"][$i]['strTags'].'<br>';
+	echo '</tr></th>';
 } ?>
 <?php
-;
 /*
 if($result-> num_rows > 0)
 {
