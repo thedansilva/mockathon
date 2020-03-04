@@ -5,12 +5,16 @@
 </head>
 
 <body>
+<form action="filter.php" method="get">
+<input type="submit" class="button" name="Alcoholic" value="Alcoholic" />
+<input type="submit" class="button" name="Non-Alcoholic" value="Non-Alcoholic" />
+</form>
 <?php
 if($_GET){
 
     if(isset($_GET['Alcoholic'])){
 
-        insert();
+        alcoholFunction();
 
     }elseif(isset($_GET['Non-Alcoholic'])){
 
@@ -45,7 +49,5 @@ function alcoholFunction() {
 }		
 
 ?>.
-<input type="submit" class="button" name="Alcoholic" value="Alcoholic" />
-<input type="submit" class="button" name="Non-Alcoholic" value="Non-Alcoholic" />
 </body>
 </html>
