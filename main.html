@@ -6,7 +6,13 @@
 	</head>
 	<body>
 		<h2>Welcome to the Cocktail Searching Website!</h2>
-		<form> <p> Search by Name: </p> </form>
+		<form> <p>
+			<div class="input-group mb-3">
+  <input type="text" onclick="window.location.href='searchname.php'" class="form-control" placeholder="Search by Name" aria-label="name" aria-describedby="basic-addon2">
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button">Search</button>
+  </div>
+</div> </p> </form>
 		<form> <p> Search by ID: </p> </form>
 		<form> <p> Search by ingredient: </p> </form>
 		<p> Random Button: </p>
